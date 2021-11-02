@@ -40,18 +40,31 @@ int main(int argc, char *argv[]) {
 
 
 
-    insertAndSetFirstWall(&head, 1,  OVERALL_WINDOW_WIDTH/2, OVERALL_WINDOW_HEIGHT/2, 10, OVERALL_WINDOW_HEIGHT/2);
-    insertAndSetFirstWall(&head, 2,  OVERALL_WINDOW_WIDTH/2-100, OVERALL_WINDOW_HEIGHT/2+100, 10, OVERALL_WINDOW_HEIGHT/2-100);
-    insertAndSetFirstWall(&head, 3,  OVERALL_WINDOW_WIDTH/2-250, OVERALL_WINDOW_HEIGHT/2+100, 150, 10);
-    insertAndSetFirstWall(&head, 4,  OVERALL_WINDOW_WIDTH/2-150, OVERALL_WINDOW_HEIGHT/2, 150, 10);
-    insertAndSetFirstWall(&head, 5,  OVERALL_WINDOW_WIDTH/2-250, OVERALL_WINDOW_HEIGHT/2-200, 10, 300);
-    insertAndSetFirstWall(&head, 6,  OVERALL_WINDOW_WIDTH/2-150, OVERALL_WINDOW_HEIGHT/2-100, 10, 100);
-    insertAndSetFirstWall(&head, 7,  OVERALL_WINDOW_WIDTH/2-250, OVERALL_WINDOW_HEIGHT/2-200, 450, 10);
-    insertAndSetFirstWall(&head, 8,  OVERALL_WINDOW_WIDTH/2-150, OVERALL_WINDOW_HEIGHT/2-100, 250, 10);
-    insertAndSetFirstWall(&head, 9,  OVERALL_WINDOW_WIDTH/2+200, OVERALL_WINDOW_HEIGHT/2-200, 10, 300);
-    insertAndSetFirstWall(&head, 10,  OVERALL_WINDOW_WIDTH/2+100, OVERALL_WINDOW_HEIGHT/2-100, 10, 300);
-    insertAndSetFirstWall(&head, 11,  OVERALL_WINDOW_WIDTH/2+100, OVERALL_WINDOW_HEIGHT/2+200, OVERALL_WINDOW_WIDTH/2-100, 10);
-    insertAndSetFirstWall(&head, 12,  OVERALL_WINDOW_WIDTH/2+200, OVERALL_WINDOW_HEIGHT/2+100, OVERALL_WINDOW_WIDTH/2-100, 10);
+    insertAndSetFirstWall(&head, 1, 1, 730, 644, 5);
+    insertAndSetFirstWall(&head, 2, 1, 1, 5, 640);
+    insertAndSetFirstWall(&head, 3, 1, 640, 230, 5);
+    insertAndSetFirstWall(&head, 4, 320, 640, 5, 90);
+    insertAndSetFirstWall(&head, 5, 320, 640, 130,5);
+    insertAndSetFirstWall(&head, 6, 550, 640, 5, 90);
+    insertAndSetFirstWall(&head, 7, 640, 100, 5, 630);
+    insertAndSetFirstWall(&head, 8, 6, 1, 645, 5);
+    insertAndSetFirstWall(&head, 9, 95, 415, 5, 120);
+    insertAndSetFirstWall(&head, 10, 95, 530, 355, 5);
+    insertAndSetFirstWall(&head, 11, 310, 310, 5, 220);
+    insertAndSetFirstWall(&head, 12, 445, 415, 5,115);
+    insertAndSetFirstWall(&head, 13, 450, 415, 90,5);
+    insertAndSetFirstWall(&head, 14, 540, 415, 5,120);
+    insertAndSetFirstWall(&head, 15, 540, 530, 100,5);
+    insertAndSetFirstWall(&head, 16, 1, 310, 210,5);
+    insertAndSetFirstWall(&head, 17, 206, 200, 5,220);
+    insertAndSetFirstWall(&head, 18, 310, 310, 135,5);
+    insertAndSetFirstWall(&head, 19, 445, 200, 5,115);
+    insertAndSetFirstWall(&head, 20, 540, 100, 5,210);
+    insertAndSetFirstWall(&head, 21, 540, 310, 100,5);
+    insertAndSetFirstWall(&head, 22, 105, 100, 5,100);
+    insertAndSetFirstWall(&head, 23, 105, 200, 205,5);
+    insertAndSetFirstWall(&head, 24, 215, 6, 5,100);
+    insertAndSetFirstWall(&head, 25, 215, 106, 230,5);
 
 
 
@@ -106,7 +119,7 @@ int main(int argc, char *argv[]) {
         robotMotorMove(&robot);
 
         //Check if robot reaches endpoint. and check sensor values
-        if (checkRobotReachedEnd(&robot, OVERALL_WINDOW_WIDTH, OVERALL_WINDOW_HEIGHT/2+100, 10, 100)){
+       if (checkRobotReachedEnd(&robot, OVERALL_WINDOW_WIDTH, 5, 10, 95)){
             end_time = clock();
             msec = (end_time-start_time) * 1000 / CLOCKS_PER_SEC;
             robotSuccess(&robot, msec);
